@@ -27,7 +27,7 @@ agent any
         }
      stage('deploy') { 
             steps {
-                bat 'mvn clean deploy' 
+                sh 'mvn clean deploy' 
             }
      }
         
