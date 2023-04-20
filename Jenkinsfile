@@ -25,7 +25,7 @@ agent any
      }
    stage('SonarQube Analysis') {
     steps{
-     sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=Vansh_webapp'
+     sh 'mvn clean verify sonar:sonar \-Dsonar.projectKey=Vansh_webapp1 \-Dsonar.host.url=http://localhost:9000 \-Dsonar.login=sqp_c70b7221e6960f24ab72230ff25f36c22d491a34'
     }
   }
  }
