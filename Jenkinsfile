@@ -25,7 +25,7 @@ agent any
      }
    stage('SonarQube Analysis') {
     steps{
-     sh "mvn clean verify sonar:sonar -Dsonar.projectKey=Vansh_webapp"
+     sh 'mvn clean install sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.analysis.mode=publish org.codehaus.sonar-plugins.pdf-report:mavenpdfreport-plugin:1.3:generate'
     }
   }
  }
