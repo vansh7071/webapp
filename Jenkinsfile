@@ -20,7 +20,7 @@ agent any
         }
      stage('deploy') { 
             steps {
-               // sh 'mvn clean deploy' 
+               sh 'mvn clean' 
             }
      }
      stage('Sonar-Report') {
